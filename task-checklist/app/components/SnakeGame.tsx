@@ -78,7 +78,7 @@ const SnakeGame: React.FC = () => {
             setGameOver(true);
             return prev;
           }
-          let newSnake = [newHead, ...prev];
+          const newSnake = [newHead, ...prev];
           if (newHead.x === food.x && newHead.y === food.y) {
             setFood(getRandomFood(newSnake));
             setScore((s) => s + 1);
@@ -194,3 +194,4 @@ const SnakeGame: React.FC = () => {
 };
 
 export default SnakeGame;
+
